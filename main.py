@@ -8,9 +8,9 @@ st.set_page_config(
 )
 
 if "board" not in st.session_state:
-    st.session_state.opponent = 'Human'
+    st.session_state.opponent = 'AI'
     st.session_state.prev_opponent = 'Human'
-    st.session_state.difficulty = 'Easy'
+    st.session_state.difficulty = 'Medium'
     init()
 
 render_game()
