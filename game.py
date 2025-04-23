@@ -58,8 +58,10 @@ def render_game():
     # Reset on opponent change
     if 'prev_opponent' not in st.session_state:
         st.session_state.prev_opponent = current_opponent
-    elif st.session_state.prev_opponent != current_opponent:
+        st.session_state.prev_difficulty = current_difficulty
+    elif st.session_state.prev_opponent != current_opponent or st.session_state.prev_difficulty != current_difficulty:
         st.session_state.prev_opponent = current_opponent
+        st.session_state.prev_difficulty = current_difficulty
         init(post_init=False)
 
     # Win message
